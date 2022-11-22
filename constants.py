@@ -523,6 +523,10 @@ arg_lut['simm5'] = (19, 15)
 arg_lut['zimm10'] = (29, 20)
 arg_lut['zimm11'] = (30, 20)
 
+# for Zisslpcfi
+arg_lut['lpimm8'] = (22, 15)
+arg_lut['lpimm9'] = (23, 15)
+
 
 #compressed immediates and fields
 arg_lut['c_nzuimm10'] = (12,5)
