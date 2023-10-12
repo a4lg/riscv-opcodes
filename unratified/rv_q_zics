@@ -1,0 +1,36 @@
+# Qualcomm proposal: flq (register-immediate)
+qc.flqib      31..30=0 29..27=2 26..25=1 imm5 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqia      31..30=0 29..27=2 26..25=2 imm5 rs1 14..12=0 rd 6..2=0x01 1..0=3
+
+# Qualcomm proposal: flq (register-register)
+qc.flqri      31..30=0 29..27=2 26..25=3 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqrib     31..30=1 29..27=2 26..25=0 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqria     31..30=1 29..27=2 26..25=1 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqsri     31..30=1 29..27=2 26..25=2 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqsrib    31..30=1 29..27=2 26..25=3 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqsria    31..30=2 29..27=2 26..25=0 rs2 rs1 14..12=0 rd 6..2=0x01 1..0=3
+
+# Qualcomm proposal: flq (PC relative)
+qc.flqipc     31..30=3 29..27=2 imm12_pcrel 14..12=0 rd 6..2=0x01 1..0=3
+
+# Qualcomm proposal: flqp (rd==rd1, rs2==rd2 [sp==rs])
+qc.flqpisp    31..30=2 29..27=2 26..25=1 rs2 simm5 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqpispb   31..30=2 29..27=2 26..25=2 rs2 simm5 14..12=0 rd 6..2=0x01 1..0=3
+qc.flqpispa   31..30=2 29..27=2 26..25=3 rs2 simm5 14..12=0 rd 6..2=0x01 1..0=3
+
+# Qualcomm proposal: fsq (register-immediate)
+qc.fsqib      31..30=0 29..27=2 26..25=1 rs2 rs1 14..12=0 imm12lo 6..2=0x09 1..0=3
+qc.fsqia      31..30=0 29..27=2 26..25=2 rs2 rs1 14..12=0 imm12lo 6..2=0x09 1..0=3
+
+# Qualcomm proposal: fsq (register-register; rd==rs3)
+qc.fsqri      31..30=0 29..27=2 26..25=3 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqrib     31..30=1 29..27=2 26..25=0 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqria     31..30=1 29..27=2 26..25=1 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqsri     31..30=1 29..27=2 26..25=2 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqsrib    31..30=1 29..27=2 26..25=3 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqsria    31..30=2 29..27=2 26..25=0 rs2 rs1 14..12=0 rd 6..2=0x09 1..0=3
+
+# Qualcomm proposal: fsqp (rd==rs1, rs2==rs2, simm5==offset)
+qc.fsqpisp    31..30=2 29..27=2 26..25=1 rs2 simm5 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqpispb   31..30=2 29..27=2 26..25=2 rs2 simm5 14..12=0 rd 6..2=0x09 1..0=3
+qc.fsqpispa   31..30=2 29..27=2 26..25=3 rs2 simm5 14..12=0 rd 6..2=0x09 1..0=3
